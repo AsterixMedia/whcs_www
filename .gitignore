@@ -1,0 +1,4 @@
+.nuxt/
+.idea/
+.DS_store
+node_modules/
