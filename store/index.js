@@ -1,6 +1,6 @@
 const state = () => ({
   location: '',
-  sidebarOpen: true
+  sidebarOpen: false
 })
 
 const getters = {

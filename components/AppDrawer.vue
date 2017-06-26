@@ -1,6 +1,6 @@
 <template lang="pug">
   v-navigation-drawer.root.grey.lighten-4.pb-0(
-    persistent,
+    temporary,
     height='100%',
     light,
     v-model="drawerStatus"
@@ -42,6 +42,7 @@
           v-list-tile(
             :to="item.to",
             :router="item.router",
+            :nuxt="item.nuxt"
           )
             v-list-tile-action
               v-icon(v-if="item.icon") {{ item.icon }}
@@ -65,7 +66,10 @@
         { heading: 'Main' },
         {
           icon: 'home',
-          text: 'Home'
+          text: 'Home',
+          to: '/',
+          router: true,
+          nuxt: true
         },
         {
           icon: 'schedule',
@@ -73,7 +77,10 @@
         },
         {
           icon: 'radio',
-          text: 'Shows'
+          text: 'Shows',
+          to: '/shows',
+          router: true,
+          nuxt: true
         },
         {
           icon: 'event',

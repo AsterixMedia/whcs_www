@@ -6,6 +6,9 @@ module.exports = {
     node: true
   },
   extends: "standard",
+  "parserOptions":{
+    "ecmaVersion": 8
+  },
   // required to lint *.vue files
   plugins: ["html", "pug"],
   // add your custom rules here
