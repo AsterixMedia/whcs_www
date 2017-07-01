@@ -1,4 +1,8 @@
 module.exports = {
+  // env options
+  // ------------
+  env: {
+  },
   // head options
   // ------------
   head: {
@@ -16,10 +20,20 @@ module.exports = {
   ],
   // plugins options
   // ---------------
-  plugins: ['~plugins/vuetify'],
+  plugins: [
+    '~plugins/vuetify',
+    '~plugins/vuex-router-sync',
+    '~plugins/graphql-request'
+  ],
   // build options
   // -------------
   build: {
-    vendors: ['vuetify']
-  }
+    vendors: ['vuetify', 'graphql-request']
+  },
+  // modules options
+  // ----------------
+  modules: [
+    '@nuxtjs/pwa',
+    '@nuxtjs/optimize'
+  ]
 }

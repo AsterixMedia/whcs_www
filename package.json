@@ -4,9 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@nuxtjs/optimize": "^1.1.0",
+    "@nuxtjs/pwa": "^0.2.0",
+    "graphql-request": "^1.2.0",
     "nuxt": "^1.0.0-alpha.4",
     "vue-types": "^1.0.1",
-    "vuetify": "^0.12.7"
+    "vuetify": "^0.12.7",
+    "vuex-router-sync": "^4.2.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",

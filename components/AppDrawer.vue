@@ -58,6 +58,11 @@
 <script>
   import { mapGetters, mapActions } from 'vuex'
 
+  const nuxt = {
+    nuxt: true,
+    router: true
+  }
+
   export default {
     name: 'AppDrawer',
     data: () => ({
@@ -88,7 +93,9 @@
         },
         {
           icon: 'people',
-          text: 'Team'
+          text: 'Team',
+          to: '/team',
+          ...nuxt
         },
         { icon: 'help', text: 'About' },
         { divider: true },
