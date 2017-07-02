@@ -1,9 +1,11 @@
 <template lang="pug">
   v-app.root
     app-drawer
+    drawer-player
     app-bar(
       :location="getLocation",
-      :toggleDrawer="toggleSidebar"
+      :toggleDrawer="toggleSidebar",
+      :togglePlayer="togglePlayerDrawer"
     )
     main: v-container(fluid): nuxt
     v-footer
@@ -14,16 +16,24 @@
 
 <script>
   import { mapGetters, mapActions } from 'vuex'
-  import { AppBar, AppDrawer } from '../components'
+  import {
+    AppBar,
+    AppDrawer,
+    DrawerPlayer
+  } from '../components'
 
   export default {
     name: 'DefaultLayout',
     components: {
+      DrawerPlayer,
       AppBar,
       AppDrawer
     },
     methods: {
-      ...mapActions(['toggleSidebar'])
+      ...mapActions([
+        'toggleSidebar',
+        'togglePlayerDrawer'
+      ])
     },
     computed: {
       ...mapGetters(['getLocation'])

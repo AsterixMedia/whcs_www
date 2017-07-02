@@ -1,11 +1,13 @@
 const state = () => ({
   location: '',
-  sidebarOpen: false
+  sidebarOpen: true,
+  playerDrawerOpen: true
 })
 
 const getters = {
   getLocation: state => state.location,
-  isSidebarOpen: state => state.sidebarOpen
+  isSidebarOpen: state => state.sidebarOpen,
+  isPlayerDrawerOpen: state => state.playerDrawerOpen
 }
 
 const mutations = {
@@ -17,6 +19,12 @@ const mutations = {
   },
   SET_SIDEBAR_STATUS (state, value) {
     state.sidebarOpen = value
+  },
+  TOGGLE_PLAYER_DRAWER (state) {
+    state.playerDrawerOpen = !state.playerDrawerOpen
+  },
+  SET_PLAYER_DRAWER_STATUS (state, value) {
+    state.playerDrawerOpen = value
   }
 }
 
@@ -29,6 +37,12 @@ const actions = {
   },
   setSidebarStatus ({commit}, value) {
     commit('SET_SIDEBAR_STATUS', value)
+  },
+  togglePlayerDrawer ({commit}) {
+    commit('TOGGLE_PLAYER_DRAWER')
+  },
+  setPlayerDrawerStatus ({commit}, value) {
+    commit('SET_PLAYER_DRAWER_STATUS', value)
   }
 }
 

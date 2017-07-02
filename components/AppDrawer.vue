@@ -1,9 +1,12 @@
 <template lang="pug">
   v-navigation-drawer.root.grey.lighten-4.pb-0(
-    temporary,
+    persistent,
     height='100%',
     light,
-    v-model="drawerStatus"
+    v-model="drawerStatus",
+    enable-resize-watcher,
+    clipped,
+    hide-overlay
   )
     v-list
       v-list-tile.mt-4.logo(

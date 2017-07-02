@@ -18,6 +18,14 @@
       light,
       disabled
     )
+
+    v-spacer
+
+    v-btn.toolbar__side-icon(
+      icon,
+      light,
+      @click.native.stop="togglePlayer"
+    ): v-icon play_circle_outline
 </template>
 
 <script>
@@ -26,6 +34,7 @@
     name: 'AppBar',
     props: {
       toggleDrawer: Types.func.isRequired,
+      togglePlayer: Types.func.isRequired,
       location: Types.string.isRequired
     }
   }
