@@ -9,15 +9,19 @@
     v-model="drawerStatus",
     enable-resize-watcher
   )
-    h1 Drawer PLayer
+    player
 
 </template>
 
 <script>
   import { mapGetters, mapActions } from 'vuex'
 
+  import Player from './Player'
   export default {
     name: 'DrawerPlayer',
+    components: {
+      Player
+    },
     methods: {
       ...mapActions(['setPlayerDrawerStatus'])
     },
