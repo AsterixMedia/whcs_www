@@ -17,15 +17,23 @@
       single-line,
       light,
       disabled
-    )
+    ).hidden-md-and-down
 
     v-spacer
 
-    v-btn.toolbar__side-icon(
+    v-btn(
+      icon,
+      light,
+      disabled
+    ).hidden-lg-and-up
+      v-icon search
+
+    v-btn(
       icon,
       light,
       @click.native.stop="togglePlayer"
-    ): v-icon play_circle_outline
+    ).toolbar__side-icon
+      v-icon play_circle_outline
 </template>
 
 <script>
