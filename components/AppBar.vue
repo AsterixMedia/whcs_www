@@ -17,7 +17,7 @@
       single-line,
       light,
       disabled
-    ).hidden-md-and-down
+    ).hidden-sm-and-down
 
     v-spacer
 
@@ -25,7 +25,7 @@
       icon,
       light,
       disabled
-    ).hidden-lg-and-up
+    ).hidden-md-and-up
       v-icon search
 
     v-btn(

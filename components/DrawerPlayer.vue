@@ -9,7 +9,10 @@
     v-model="drawerStatus",
     enable-resize-watcher
   )
-    player
+    player(
+      :sources="source",
+      :html5="true"
+    )
 
 </template>
 
@@ -22,11 +25,19 @@
     components: {
       Player
     },
+    data () {
+      return ({
+        source: ['http://live-radio01.mediahubaustralia.com/PBW/mp3/']
+      })
+    },
     methods: {
       ...mapActions(['setPlayerDrawerStatus'])
     },
     computed: {
-      ...mapGetters(['isPlayerDrawerOpen']),
+      ...mapGetters([
+        'isPlayerDrawerOpen',
+        'getAudioSources'
+      ]),
       drawerStatus: {
         get () {
           return this.isPlayerDrawerOpen

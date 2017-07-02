@@ -16,7 +16,13 @@
       v-flex(xs12).pt-2.pb-2
         v-btn(icon, large, disabled): v-icon shuffle
         v-btn(icon, large, disabled): v-icon skip_previous
-        v-btn(floating, info): v-icon(light) play_circle_outline
+        v-btn(
+          floating,
+          info,
+          @click="togglePlayback"
+        )
+          v-icon(light)
+            | {{ playing ? 'pause_circle_outline' : 'play_circle_outline'}}
         v-btn(icon, large, disabled): v-icon skip_next
         v-btn(icon, large, disabled): v-icon loop
 
@@ -60,8 +66,11 @@
 </template>
 
 <script>
+  import Howler from 'vue-howler'
+
   export default {
     name: 'Player',
+    mixins: [Howler],
     data: () => ({
       items: [
         { divider: true },
