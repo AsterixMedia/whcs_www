@@ -19,7 +19,7 @@
         v-btn(
           floating,
           info,
-          @click="togglePlayback"
+          @click.native="togglePlayback"
         )
           v-icon(light)
             | {{ playing ? 'pause_circle_outline' : 'play_circle_outline'}}
@@ -66,11 +66,11 @@
 </template>
 
 <script>
-  import Howler from 'vue-howler'
+  import VueHowler from 'vue-howler'
 
   export default {
     name: 'Player',
-    mixins: [Howler],
+    mixins: [VueHowler],
     data: () => ({
       items: [
         { divider: true },

@@ -27,7 +27,9 @@
     },
     data () {
       return ({
-        source: ['http://live-radio01.mediahubaustralia.com/PBW/mp3/']
+        source: [
+          'http://streams.museter.com:8629/stream'
+        ]
       })
     },
     methods: {

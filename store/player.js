@@ -1,5 +1,7 @@
 const state = () => ({
-  sources: ['http://192.184.9.158:8629/stream']
+  sources: [
+    'http://streams.museter.com:8629/stream'
+  ]
 })
 
 const getters = {
