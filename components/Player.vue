@@ -13,17 +13,18 @@
         em Where Hunter College Speaks
 
       v-flex(xs12).pt-2.pb-2
-        v-btn(icon, large, disabled): v-icon shuffle
-        v-btn(icon, large, disabled): v-icon skip_previous
+        v-btn(icon, disabled): v-icon shuffle
+        v-btn(icon, disabled): v-icon skip_previous
         v-btn(
-          floating,
+          fab,
           primary,
+          dark,
           @click.native="togglePlayback"
         )
           v-icon(light)
             | {{ playing ? 'pause_circle_outline' : 'play_circle_outline'}}
-        v-btn(icon, large, disabled): v-icon skip_next
-        v-btn(icon, large, disabled): v-icon loop
+        v-btn(icon, disabled): v-icon skip_next
+        v-btn(icon, disabled): v-icon loop
 
     v-list
       template(v-for='(item, i) in items')

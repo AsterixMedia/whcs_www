@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-navigation-drawer.root.grey.lighten-4.pb-0(
+  v-navigation-drawer(
     persistent,
     height='100%',
     light,
@@ -8,7 +8,7 @@
     hide-overlay,
     v-model="drawerStatus",
     enable-resize-watcher
-  )
+  ).white.root.pb-0
     player(
       :sources="source",
       :html5="true"
