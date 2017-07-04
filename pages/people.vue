@@ -1,5 +1,5 @@
 <template lang="pug">
-  .root: v-content
+  .root
     team(name="Executives", :n="4")
     team(name="Ambassadors", :n="4")
     team(name="Music")
