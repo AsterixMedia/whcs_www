@@ -11,7 +11,7 @@
 
 <script>
   import Types from 'vue-types'
-  import { HumanCard } from './index'
+  import HumanCard from './HumanCard'
 
   export default {
     name: 'Team',
