@@ -735,8 +735,8 @@ babel-polyfill@6.23.0:
     regenerator-runtime "^0.10.0"
 
 babel-preset-env@^1.2.1:
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/babel-preset-env/-/babel-preset-env-1.5.2.tgz#cd4ae90a6e94b709f97374b33e5f8b983556adef"
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/babel-preset-env/-/babel-preset-env-1.6.0.tgz#2de1c782a780a0a5d605d199c957596da43c44e4"
   dependencies:
     babel-plugin-check-es2015-constants "^6.22.0"
     babel-plugin-syntax-trailing-function-commas "^6.22.0"
@@ -2653,7 +2653,7 @@ hosted-git-info@^2.1.4:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.5.0.tgz#6d60e34b3abbc8313062c3b798ef8d901a07af3c"
 
-howler@^2.0.3:
+howler@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/howler/-/howler-2.0.4.tgz#cbd5db875f9833e1aa6084568951d788fc687f92"
 
@@ -3612,9 +3612,16 @@ node-dir@^0.1.10:
   dependencies:
     minimatch "^3.0.2"
 
-node-fetch@1.6.3, node-fetch@^1.0.1:
+node-fetch@1.6.3:
   version "1.6.3"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-1.6.3.tgz#dc234edd6489982d58e8f0db4f695029abcd8c04"
+  dependencies:
+    encoding "^0.1.11"
+    is-stream "^1.0.1"
+
+node-fetch@^1.0.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-1.7.1.tgz#899cb3d0a3c92f952c47f1b876f4c8aeabd400d5"
   dependencies:
     encoding "^0.1.11"
     is-stream "^1.0.1"
@@ -5721,10 +5728,10 @@ vue-hot-reload-api@^2.1.0:
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.1.0.tgz#9ca58a6e0df9078554ce1708688b6578754d86de"
 
 vue-howler@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/vue-howler/-/vue-howler-0.3.1.tgz#837834e531f7c2aee3c14807106b0e1c225338b1"
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/vue-howler/-/vue-howler-0.3.2.tgz#6338c3f6a4e879beb62827ccb8e13f5ad160413c"
   dependencies:
-    howler "^2.0.3"
+    howler "^2.0.4"
     lodash.assign "^4.2.0"
     lodash.clamp "^4.0.3"
     lodash.values "^4.3.0"
@@ -5772,7 +5779,7 @@ vue-router@^2.3.0, vue-router@^2.5.3:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-2.7.0.tgz#16d424493aa51c3c8cce8b7c7210ea4c3a89aff1"
 
-vue-server-renderer@^2.3.3, vue-server-renderer@~2.3.3:
+vue-server-renderer@~2.3.3:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/vue-server-renderer/-/vue-server-renderer-2.3.4.tgz#ce1361eb32bfb84573b9c9b83f2810de8fa606c7"
   dependencies:
@@ -5826,12 +5833,11 @@ vue@^2.3.3, vue@~2.3.3:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.3.4.tgz#5ec3b87a191da8090bbef56b7cfabd4158038171"
 
-vuetify@^0.12.7:
-  version "0.12.7"
-  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-0.12.7.tgz#da77c1855413ead6e3012c9bb9803f16f71d4c7b"
+vuetify@^0.13.0:
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-0.13.0.tgz#fd3c7e581dc082d9539f75b911b01b5982cb7a2d"
   dependencies:
     vue "^2.3.3"
-    vue-server-renderer "^2.3.3"
 
 vuex-router-sync@^4.1.2, vuex-router-sync@^4.2.0:
   version "4.2.0"
