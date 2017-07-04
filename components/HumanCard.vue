@@ -1,7 +1,7 @@
 <template lang="pug">
   .root
     v-card(flat, hover)
-      v-card-row(:img="img", height="180px")
+      v-card-media(:src="img", height="150px")
       v-card-text.pa-1
         span {{ fname }}
         br
@@ -23,5 +23,5 @@
 
 <style lang="stylus" scoped>
   .root
-    min-width 180px
+    min-width 150px
 </style>

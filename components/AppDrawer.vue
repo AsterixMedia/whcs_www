@@ -49,10 +49,7 @@
           )
             v-list-tile-action
               v-icon(v-if="item.icon") {{ item.icon }}
-              i.mdi.material-icons.icon--dark(
-                v-else-if="item.micon",
-                :class="`mdi-${item.micon}`"
-              )
+              v-icon(v-else-if="item.micon", mdi) {{ item.micon }}
             v-list-tile-content
               v-list-tile-title
                 | {{ item.text }}
