@@ -8,10 +8,10 @@
       :togglePlayer="togglePlayerDrawer"
     )
     main: v-container(fluid): nuxt
-    v-footer
-      span Asterix*Designs
+    v-footer.primary
+      span.white--text Asterix*Designs
       v-spacer
-      span WHCS Radio © {{ new Date().getFullYear() }}
+      span.white--text WHCS Radio © {{ new Date().getFullYear() }}
 </template>
 
 <script>

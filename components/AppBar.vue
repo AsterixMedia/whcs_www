@@ -1,22 +1,23 @@
 <template lang="pug">
-  v-toolbar.root(
+  v-toolbar(
     fixed,
-    light
-  )
+    dark
+  ).root.primary
     v-toolbar-side-icon(
-      light,
       @click.native.stop="toggleDrawer"
     )
 
     v-toolbar-title {{ location }}
+
+    v-spacer
 
     v-text-field(
       prepend-icon="search",
       label="Search...",
       hide-details,
       single-line,
-      light,
-      disabled
+      disabled,
+      dark
     ).hidden-sm-and-down
 
     v-spacer
