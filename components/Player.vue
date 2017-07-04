@@ -17,7 +17,7 @@
         v-btn(icon, large, disabled): v-icon skip_previous
         v-btn(
           floating,
-          info,
+          primary,
           @click.native="togglePlayback"
         )
           v-icon(light)
