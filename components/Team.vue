@@ -1,5 +1,5 @@
 <template lang="pug">
-  .root
+  .root.team
     h3 {{ name }}
     .team-container
       human-card(v-for="i in n", :key="i",
@@ -11,7 +11,7 @@
 
 <script>
   import Types from 'vue-types'
-  import { HumanCard } from './'
+  import { HumanCard } from './index'
 
   export default {
     name: 'Team',

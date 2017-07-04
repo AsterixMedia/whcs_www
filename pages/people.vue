@@ -30,5 +30,6 @@
 
 <style lang="stylus" scoped="">
   .root
-    /**/
+    .team:not(:first-child)
+      padding-top 20px
 </style>
