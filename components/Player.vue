@@ -19,7 +19,8 @@
           fab,
           primary,
           dark,
-          @click.native="togglePlayback"
+          :loading="loading",
+          @click.native="playback"
         )
           v-icon(light)
             | {{ playing ? 'pause_circle_outline' : 'play_circle_outline'}}
@@ -72,6 +73,7 @@
     name: 'Player',
     mixins: [VueHowler],
     data: () => ({
+      loading: false,
       items: [
         { divider: true },
         { heading: 'Currently Playing' },
@@ -97,7 +99,25 @@
           text: 'There are many variations '
         }
       ]
-    })
+    }),
+    methods: {
+      playback () {
+        switch (this.playing) {
+          case true:
+            this.togglePlayback()
+            break
+          case false:
+            this.togglePlayback()
+            this.loading = true
+            break
+        }
+      }
+    },
+    watch: {
+      playing () {
+        this.loading = false
+      }
+    }
   }
 </script>
 
