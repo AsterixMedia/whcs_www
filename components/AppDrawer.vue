@@ -96,8 +96,8 @@
         },
         {
           icon: 'people',
-          text: 'Team',
-          to: '/team',
+          text: 'People',
+          to: '/people',
           ...nuxt
         },
         { icon: 'help', text: 'About' },
