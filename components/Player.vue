@@ -1,7 +1,6 @@
 <template lang="pug">
   .root.pt-4
     v-layout(
-      justify-center,
       align-center,
       column
     )
