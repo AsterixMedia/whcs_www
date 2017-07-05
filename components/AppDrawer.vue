@@ -45,7 +45,9 @@
           v-list-tile(
             :to="item.to",
             :router="item.router",
-            :nuxt="item.nuxt"
+            :nuxt="item.nuxt",
+            :target="item.target",
+            :href="item.href"
           )
             v-list-tile-action
               v-icon(v-if="item.icon") {{ item.icon }}
@@ -102,19 +104,27 @@
         { heading: 'Social' },
         {
           micon: 'facebook',
-          text: 'Facebook'
+          text: 'Facebook',
+          href: 'https://www.facebook.com/WHCSHunterRadio/',
+          target: '__blanks'
         },
         {
           micon: 'twitter',
-          text: 'Twitter'
+          text: 'Twitter',
+          href: 'https://twitter.com/whcsradio',
+          target: '__blank'
         },
         {
           micon: 'instagram',
-          text: 'Instagram'
+          text: 'Instagram',
+          href: 'https://www.instagram.com/whcsradio',
+          target: '__blank'
         },
         {
           micon: 'snapchat',
-          text: 'Snapchat'
+          text: 'Snapchat',
+          href: 'https://www.snapchat.com/add/whcsradio',
+          target: '__blank'
         }
       ]
     }),
