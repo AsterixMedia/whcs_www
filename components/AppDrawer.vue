@@ -75,23 +75,25 @@
           icon: 'home',
           text: 'Home',
           to: '/',
-          router: true,
-          nuxt: true
+          ...nuxt
         },
         {
           icon: 'schedule',
-          text: 'Schedule'
+          text: 'Schedule',
+          to: '/schedule',
+          ...nuxt
         },
         {
           icon: 'radio',
           text: 'Shows',
           to: '/shows',
-          router: true,
-          nuxt: true
+          ...nuxt
         },
         {
           icon: 'event',
-          text: 'Events'
+          text: 'Events',
+          to: '/events',
+          ...nuxt
         },
         {
           icon: 'people',
@@ -99,7 +101,12 @@
           to: '/people',
           ...nuxt
         },
-        { icon: 'help', text: 'About' },
+        {
+          icon: 'help',
+          text: 'About',
+          to: '/about',
+          ...nuxt
+        },
         { divider: true },
         { heading: 'Social' },
         {
