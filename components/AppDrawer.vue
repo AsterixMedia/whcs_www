@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-navigation-drawer.root.grey.lighten-4.pb-0(
+  v-navigation-drawer(
     persistent,
     height='100%',
     light,
@@ -7,7 +7,7 @@
     enable-resize-watcher,
     clipped,
     hide-overlay
-  )
+  ).root.pb-0.white
     v-list
       v-list-tile.mt-4.logo(
         avatar,

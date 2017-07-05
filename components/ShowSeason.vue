@@ -1,12 +1,12 @@
 <template lang="pug">
   .root.seasons
     h3 {{ name }}
-      .season-container
-        ShowCard(
-          v-for="i in n", :key="i",
-          :img="`https://dummyimage.com/300x300/dbdbdb/000000.png&text=${i}`",
-          :name="`Show Name ${i}`"
-        ).pa-1
+    .season-container
+      ShowCard(
+        v-for="i in n", :key="i",
+        :img="`https://dummyimage.com/300x300/dbdbdb/000000.png&text=${i}`",
+        :name="`Show Name ${i}`"
+      ).pa-1
 </template>
 
 <script>

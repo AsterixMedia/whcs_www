@@ -8,7 +8,7 @@
       v-card-media(
         src="http://media.npr.org/images/podcasts/primary/icon_381444650-5570d7391fdffd8c38f8e57057b567311fd64bd8-s300-c85.jpg",
       )
-      v-card-text.pt-0.pb-0 {{ name }}
+      v-card-text.truncate {{ name }}
 </template>
 
 <script>
@@ -25,14 +25,18 @@
 
 <style lang="stylus" scoped>
   .root
-    .card__text
-      font-size 20px
-      font-weight 300
-    min-width 150px
-    @media screen and (min-width: 600px)
+    min-width 120px
+    @media screen and (min-width: 1230px)
       min-width 300px
     .card__media
-      min-height 150px
-      @media screen and (min-width: 600px)
+      min-height 120px
+      @media screen and (min-width: 1230px)
         min-height 300px
+    .truncate
+      width 120px
+      white-space nowrap
+      overflow hidden
+      text-overflow ellipsis
+      @media screen and (min-width: 1230px)
+        width 300px
 </style>
