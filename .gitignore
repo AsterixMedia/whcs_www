@@ -2,3 +2,6 @@
 .idea/
 .DS_Store
 node_modules/
+dist/
+static/sw.js
+static/workbox-sw*.js
