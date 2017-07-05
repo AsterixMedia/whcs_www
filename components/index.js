@@ -6,6 +6,7 @@ import Player from './Player'
 import HumanCard from './HumanCard'
 import Team from './Team.vue'
 import ShowSeason from './ShowSeason.vue'
+import PeopleProfile from './PeopleProfile.vue'
 
 export {
   AppBar,
@@ -15,5 +16,6 @@ export {
   Player,
   HumanCard,
   Team,
-  ShowSeason
+  ShowSeason,
+  PeopleProfile
 }

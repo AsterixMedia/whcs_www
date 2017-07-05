@@ -5,11 +5,12 @@
     team(name="Music")
     team(name="News", :n="20")
     team(name="Production", :n="14")
+    people-profile
 </template>
 
 <script>
   import { mapActions } from 'vuex'
-  import { Team } from '~components'
+  import { Team, PeopleProfile } from '~components'
 
   export default {
     name: 'PeoplePage',
@@ -17,7 +18,8 @@
       title: 'People'
     }),
     components: {
-      Team
+      Team,
+      PeopleProfile
     },
     methods: {
       ...mapActions(['setLocation'])

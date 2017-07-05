@@ -1,6 +1,10 @@
 <template lang="pug">
   .root
-    v-card(flat, hover)
+    v-card(
+      flat,
+      hover,
+      @click="activateProfile"
+    )
       v-card-media(:src="img", height="150px")
       v-card-text.pa-1
         span {{ fname }}
@@ -10,6 +14,7 @@
 
 <script>
   import Types from 'vue-types'
+  import { mapActions } from 'vuex'
 
   export default {
     name: 'HumanCard',
@@ -17,6 +22,9 @@
       img: Types.string,
       fname: Types.string,
       lname: Types.string
+    },
+    methods: {
+      ...mapActions('people', ['activateProfile'])
     }
   }
 </script>
