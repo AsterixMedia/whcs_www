@@ -1,12 +1,14 @@
 <template lang="pug">
   .root.team
     h3 {{ name }}
-    .team-container
-      human-card(v-for="i in n", :key="i",
-        img="https://randomuser.me/api/portraits/men/83.jpg",
-        fname="John",
-        lname="Killer"
-      ).pa-1
+    template(v-for="(human, i) in humans")
+      .team-container
+        nuxt-link(:to="`people/${human.slug}`")
+          human-card(
+            :img="human.pic",
+            :fname="human.fname",
+            :lname="human.lname"
+          ).pa-1
 </template>
 
 <script>
@@ -17,7 +19,8 @@
     name: 'Team',
     props: {
       name: Types.string,
-      n: Types.number.def(10)
+      n: Types.number.def(10),
+      humans: Types.array
     },
     components: {
       HumanCard
@@ -31,4 +34,6 @@
       display: flex
       flex-wrap wrap
       justify-content source
+    a
+      text-decoration none
 </style>
