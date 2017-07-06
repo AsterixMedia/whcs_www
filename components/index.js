@@ -4,8 +4,9 @@ import ShowCard from './ShowCard'
 import DrawerPlayer from './DrawerPlayer'
 import Player from './Player'
 import HumanCard from './HumanCard'
-import Team from './Team.vue'
-import ShowSeason from './ShowSeason.vue'
+import Team from './Team'
+import ShowSeason from './ShowSeason'
+import HumanProfile from './HumanProfile'
 
 export {
   AppBar,
@@ -15,5 +16,6 @@ export {
   Player,
   HumanCard,
   Team,
-  ShowSeason
+  ShowSeason,
+  HumanProfile
 }

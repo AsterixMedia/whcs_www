@@ -1,8 +1,8 @@
 <template lang="pug">
   .root.team
     h3 {{ name }}
-    template(v-for="(human, i) in humans")
-      .team-container
+    .team-container
+      template(v-for="(human, i) in humans")
         nuxt-link(:to="`people/${human.slug}`")
           human-card(
             :img="human.pic",
