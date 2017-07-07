@@ -1,4 +1,4 @@
-export default [
+module.exports = [
   /*
   People Object Structure
    {

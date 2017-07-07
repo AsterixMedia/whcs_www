@@ -1,8 +1,11 @@
+const People = require('./data/people')
+
+let peopleProfileRoutes = People.map(human => `/people/${human.slug}`)
+
 module.exports = {
   // env options
   // ------------
-  env: {
-  },
+  env: {},
   // head options
   // ------------
   head: {
@@ -28,12 +31,22 @@ module.exports = {
   // build options
   // -------------
   build: {
-    vendors: ['vuetify', 'graphql-request']
+    vendors: ['vuetify', 'graphql-request'],
+    analyze: true
   },
   // modules options
   // ----------------
   modules: [
     '@nuxtjs/pwa',
     '@nuxtjs/optimize'
-  ]
+  ],
+  // generation options
+  // ----------------
+  generate: {
+    routes: [
+      '/',
+      '/people',
+      ...peopleProfileRoutes
+    ]
+  }
 }

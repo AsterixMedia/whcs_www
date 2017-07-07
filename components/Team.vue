@@ -3,7 +3,7 @@
     h3 {{ name }}
     .team-container
       template(v-for="(human, i) in humans")
-        nuxt-link(:to="`people/${human.slug}`")
+        nuxt-link(:to="{ path: `people/${human.slug}` }")
           human-card(
             :img="human.pic",
             :fname="human.fname",
