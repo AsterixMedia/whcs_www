@@ -1,15 +1,14 @@
 <template lang="pug">
   .root
-    team(name="Executives", :n="4")
-    team(name="Ambassadors", :n="4")
-    team(name="Music")
-    team(name="News", :n="20")
-    team(name="Production", :n="14")
+    team(name="Executives", :humans="executives")
+    team(name="Ambassadors", :humans="ambassadors")
 </template>
 
 <script>
   import { mapActions } from 'vuex'
+
   import { Team } from '~components'
+  import { People } from '~/data'
 
   export default {
     name: 'PeoplePage',
@@ -19,11 +18,19 @@
     components: {
       Team
     },
+    data () {
+      return {
+        executives: [],
+        ambassadors: []
+      }
+    },
     methods: {
       ...mapActions(['setLocation'])
     },
     created () {
       this.setLocation('People')
+      this.executives = People.filter(human => human.team === 'Executive')
+      this.ambassadors = People.filter(human => human.team === 'Ambassadors')
     }
   }
 </script>
