@@ -2,11 +2,12 @@
   .root.seasons
     h3 {{ name }}
     .season-container
-      ShowCard(
-        v-for="i in n", :key="i",
-        :img="`https://dummyimage.com/300x300/dbdbdb/000000.png&text=${i}`",
-        :name="`Show Name ${i}`"
-      ).pa-1
+      template(v-for="(show, i) in shows")
+        nuxt-link(:to="{ path : `shows/${show.slug}`}")
+          ShowCard(
+            :img="show.cover",
+            :name="show.name"
+          ).pa-1
 </template>
 
 <script>
@@ -17,7 +18,8 @@
     name: 'ShowSeason',
     props: {
       name: Types.string,
-      n: Types.number
+      n: Types.number,
+      shows: Types.array
     },
     components: {
       ShowCard
@@ -31,4 +33,6 @@
       display: flex
       flex-wrap wrap
       justify-content center
+    a
+      text-decoration none
 </style>

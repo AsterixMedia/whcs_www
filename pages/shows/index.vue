@@ -1,12 +1,13 @@
 <template lang="pug">
   .root
-    show-season(name="Summer 2017", :n="10")
-    show-season(name="Fall 2017", :n="30")
+    show-season(name="Summer 2017", :shows="summer17")
 </template>
 
 <script>
   import { mapActions } from 'vuex'
   import { ShowSeason } from '~components'
+
+  import { Shows } from '~/data'
 
   export default {
     name: 'ShowsPage',
@@ -16,11 +17,17 @@
     components: {
       ShowSeason
     },
+    data: () => ({
+      summer17: [],
+      fall17: []
+    }),
     methods: {
       ...mapActions(['setLocation'])
     },
     created () {
       this.setLocation('Shows')
+      this.summer17 = Shows.filter(show => show.season === 'Summer 2017')
+      this.fall17 = Shows.filter(show => show.season === 'Fall 2017')
     }
   }
 </script>
