@@ -7,6 +7,7 @@ import HumanCard from './HumanCard'
 import Team from './Team'
 import ShowSeason from './ShowSeason'
 import HumanProfile from './HumanProfile'
+import ShowProfileCard from './ShowProfileCard'
 
 export {
   AppBar,
@@ -17,5 +18,6 @@ export {
   HumanCard,
   Team,
   ShowSeason,
-  HumanProfile
+  HumanProfile,
+  ShowProfileCard
 }
