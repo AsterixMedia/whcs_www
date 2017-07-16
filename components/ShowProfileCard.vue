@@ -44,7 +44,7 @@
 
 <style lang="stylus" scoped>
   .root
-    margin 0 auto
+    margin 10px auto
     max-width 800px
     .cover > img
       width 100%

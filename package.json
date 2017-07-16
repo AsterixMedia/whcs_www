@@ -31,7 +31,9 @@
     "vue-play": "^3.2.1"
   },
   "scripts": {
-    "start": "nuxt",
+    "dev": "nuxt",
+    "start": "nuxt start",
+    "build": "nuxt build",
     "generate": "nuxt generate",
     "play": "poi --config play.config.js",
     "build:play": "poi build --config play.config.js"
