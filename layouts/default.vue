@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-app.root
+  v-app.root(footer, :fixedFooter="true")
     app-drawer
     drawer-player
     app-bar(

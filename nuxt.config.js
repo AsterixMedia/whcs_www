@@ -26,12 +26,13 @@ module.exports = {
   plugins: [
     '~plugins/vuetify',
     '~plugins/vuex-router-sync',
-    '~plugins/graphql-request'
+    '~plugins/graphql-request',
+    '~plugins/firebase'
   ],
   // build options
   // -------------
   build: {
-    vendors: ['vuetify', 'graphql-request'],
+    vendors: ['vuetify', 'graphql-request', 'firebase'],
     analyze: true
   },
   // modules options
